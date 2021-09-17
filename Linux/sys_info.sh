@@ -60,7 +60,6 @@ echo $execs >> $output
 
 echo -e "\nTop 10 Processes" >> $output
 ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head >> $output
-fi
 
 files=('/etc/passwd' '/etc/shadow')
 echo -e "\nThe permissions for sensitive /etc files: \n" >> $output
